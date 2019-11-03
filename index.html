@@ -108,7 +108,31 @@
     </form>
   </div>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAQcKOfHh3baROB71WuihWBBNsFm0q6yho",
+    authDomain: "smart-ride-pwa.firebaseapp.com",
+    databaseURL: "https://smart-ride-pwa.firebaseio.com",
+    projectId: "smart-ride-pwa",
+    storageBucket: "smart-ride-pwa.appspot.com",
+    messagingSenderId: "241081847394",
+    appId: "1:241081847394:web:166fa9f22cafa241e1cb3b",
+    measurementId: "G-R3FP21DY0L"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  firebase.analytics();
+</script>
   <script src="/js/app.js"></script>
+  <script src="/js/db.js"></script>
   <script src="/js/ui.js"></script>
 </body>
 </html>
