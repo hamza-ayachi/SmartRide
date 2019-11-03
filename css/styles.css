@@ -36,7 +36,11 @@ nav .sidenav-trigger{
 }
 .ride img{
   grid-area: image;
-  max-width: 60px;
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute ;
+  top: 10%;
+  left: 10%;
 }
 .ride-details{
   grid-area: details;
@@ -55,6 +59,7 @@ nav .sidenav-trigger{
   font-weight: bold;
 }
 .ride-ingredients{
+  font-weight: bold;
   font-size: 0.8em;
 }
 

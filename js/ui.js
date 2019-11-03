@@ -14,11 +14,13 @@ const renderRide = (data, id) => {
 
   const html = `
     <div class="card-panel ride white row" data-id="${id}">
-      <img src="/img/dish.png" alt="ride thumb">
+      <img src="/img/driver.png" alt="ride thumb">
       <div class="ride-details">
-        <div class="ride-title">Driver: ${data.driver}</div>
-        <div class="ride-ingredients">Pick up location: ${data.pickUp}</div>
-        <div class="ride-ingredients">Pick up time: ${data.time}</div>
+        <div class="ride-title">Driver:&nbsp; <font color = "#ff4411">${data.driver}</font><br></div>
+        <div class="ride-ingredients" ><br> Pick up location:&nbsp; <font color = "#b48608">${data.pickUp}</font> </div>
+        <div class="ride-ingredients">Destination:&nbsp; <font color = "green">${data.destination}</font><br></div>
+        <div class="ride-ingredients"><br>Time:&nbsp; <font color ="#d04764">${data.time.toDate()}</font><br></div>
+        <div class="ride-ingredients"><br>Vacant seats: &nbsp;  <font color ="##d54d7b">${data.places}</font></div>
       </div>
       <div class="ride-delete">
         <i class="material-icons" data-id="${id}">delete_outline</i>
