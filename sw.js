@@ -3,6 +3,7 @@ const dynamicCacheName = 'site-dynamic-v1';
 const assets = [
   '/',
   '/index.html',
+  '/pages/fallback.html',
   '/js/app.js',
   '/js/ui.js',
   '/js/materialize.min.js',
@@ -50,6 +51,10 @@ self.addEventListener('fetch', evt => {
             return fetchRes;
           })
         });
+      }).catch(() => {
+        if(evt.request.url.indexOf('.html') > -1){
+          return caches.match('/pages/fallback.html');
+        } 
       })
     );
   });
