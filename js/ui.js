@@ -19,7 +19,7 @@ const renderRide = (data, id) => {
         <div class="ride-title">Driver:&nbsp; <font color = "#ff4411">${data.driver}</font><br></div>
         <div class="ride-ingredients" ><br> Pick up location:&nbsp; <font color = "#b48608">${data.pickUp}</font> </div>
         <div class="ride-ingredients">Destination:&nbsp; <font color = "green">${data.destination}</font><br></div>
-        <div class="ride-ingredients"><br>Time:&nbsp; <font color ="#d04764">${data.time.toDate()}</font><br></div>
+        <div class="ride-ingredients"><br>Date:&nbsp; <font color ="#d04764">${data.time}</font><br></div>
         <div class="ride-ingredients"><br>Vacant seats: &nbsp;  <font color ="##d54d7b">${data.places}</font></div>
       </div>
       <div class="ride-delete">

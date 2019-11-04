@@ -21,3 +21,25 @@ db.collection('rides').onSnapshot(snapshot => {
       }
     });
   });
+
+  // add new ride
+const form = document.querySelector('form');
+form.addEventListener('submit', evt => {
+  evt.preventDefault();
+  const ride = {
+    driver: form.driver.value,
+    pickUp: form.pickUp.value,
+    destination: form.destination.value,
+    time: form.date.value.replace("T", "  Time: "),
+    places: form.places.value
+  };
+
+  db.collection('rides').add(ride)
+    .catch(err => console.log(err));
+
+  form.driver.value = '';
+  form.pickUp.value = '';
+  form.destination.value = '';
+  form.time.value = '';
+  form.places.value = '';
+});
