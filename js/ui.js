@@ -30,3 +30,9 @@ const renderRide = (data, id) => {
   rides.innerHTML += html;
 
 };
+
+//remove ride from DOM
+const removeRide = (id) => {
+  const ride = document.querySelector("[data-id= "+ CSS.escape(id) +"]");
+  ride.remove();
+};

@@ -17,7 +17,7 @@ db.collection('rides').onSnapshot(snapshot => {
         renderRide(change.doc.data(), change.doc.id);
       }
       if(change.type === 'removed'){
-        // remove the document data from the web page
+        removeRide(change.doc.id);
       }
     });
   });
@@ -40,6 +40,16 @@ form.addEventListener('submit', evt => {
   form.driver.value = '';
   form.pickUp.value = '';
   form.destination.value = '';
-  form.time.value = '';
+  form.date.value = '';
   form.places.value = '';
+});
+
+//delete a ride
+const rideContainer = document.querySelector('.rides');
+rideContainer.addEventListener('click', evt => {
+  //console.log(evt);
+  if(evt.target.tagName === 'I'){
+    const id = evt.target.getAttribute('data-id');
+    db.collection('rides').doc(id).delete();
+  }
 });
