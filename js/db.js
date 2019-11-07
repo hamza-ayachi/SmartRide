@@ -63,5 +63,10 @@ rideContainer2.addEventListener('click', evt => {
     db.collection('rides').doc(id).update({
       places: decrease
     });
+    removeRide(id);
+    var docRef = db.collection('rides').doc(id);
+    docRef.get().then(function(doc) {
+      renderRide(doc.data(), id);
+    });
   }
 });

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const renderRide = (data, id) => {
 
   const html = `
-    <div class="card-panel ride white row" data-id="${id}">
+    <div class="card-panel ride white row" data-id="${id}" id ="${id}">
       <img src="/img/driver.png" alt="ride thumb">
       <div class="ride-details">
         <div class="ride-title">Driver:&nbsp; <font color = "#ff4411">${data.driver}</font><br></div>
@@ -23,7 +23,7 @@ const renderRide = (data, id) => {
         <div class="ride-ingredients"><br>Vacant seats: &nbsp;  <font color ="##d54d7b">${data.places}</font></div>
       </div>
       <div class="ride-join">
-      <a href="#"><i class="material-icons" id = "join" data-id="${id}">thumb_up</i></a>
+      <a href="#" onclick='renderRide(${data},${id});'><i class="material-icons" id = "join" data-id="${id}">thumb_up</i></a>
       </div>
       <div class="ride-delete">
       <a href="#"><i class="material-icons" id = "delete" data-id="${id}">delete_outline</i></a>
