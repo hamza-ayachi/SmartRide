@@ -22,8 +22,11 @@ const renderRide = (data, id) => {
         <div class="ride-ingredients"><br>Date:&nbsp; <font color ="#d04764">${data.time}</font><br></div>
         <div class="ride-ingredients"><br>Vacant seats: &nbsp;  <font color ="##d54d7b">${data.places}</font></div>
       </div>
+      <div class="ride-join">
+      <a href="#"><i class="material-icons" id = "join" data-id="${id}">thumb_up</i></a>
+      </div>
       <div class="ride-delete">
-      <a href=""><i class="material-icons" data-id="${id}">delete_outline</i></a>
+      <a href="#"><i class="material-icons" id = "delete" data-id="${id}">delete_outline</i></a>
       </div>
     </div>
   `;

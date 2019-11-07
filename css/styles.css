@@ -55,6 +55,15 @@ nav .sidenav-trigger{
 .ride-delete i{
   font-size: 18px;
 }
+.ride-join{
+  grid-area: delete;
+  position: absolute;
+  bottom: 0px;
+  right: 30px;
+}
+.ride-join i{
+  font-size: 18px;
+}
 .ride-title{
   font-weight: bold;
 }

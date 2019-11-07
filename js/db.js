@@ -45,11 +45,23 @@ form.addEventListener('submit', evt => {
 });
 
 //delete a ride
-const rideContainer = document.querySelector('.rides');
-rideContainer.addEventListener('click', evt => {
-  //console.log(evt);
-  if(evt.target.tagName === 'I'){
+const rideContainer1 = document.querySelector('.rides');
+rideContainer1.addEventListener('click', evt => {
+  console.log(evt);
+  if(evt.target.id === "delete"){
     const id = evt.target.getAttribute('data-id');
     db.collection('rides').doc(id).delete();
+  }
+});
+
+//join a ride
+const rideContainer2 = document.querySelector('.rides');
+rideContainer2.addEventListener('click', evt => {
+  console.log(evt);
+  if(evt.target.id === "join"){
+    const id = evt.target.getAttribute('data-id');
+    db.collection('rides').doc(id).update({
+      places: decrease
+    });
   }
 });
