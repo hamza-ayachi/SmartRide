@@ -12,6 +12,7 @@ const assets = [
   '/css/styles.css',
   '/css/materialize.min.css',
   '/img/driver.png',
+  '/img/icons/icon-72x72.png',
   'https://fonts.googleapis.com/icon?family=Material+Icons',
   'https://fonts.gstatic.com/s/materialicons/v47/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2'
 ];
